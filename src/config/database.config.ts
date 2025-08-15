@@ -8,6 +8,10 @@ export const getDatabaseConfig = () => {
   const isProduction = config.NODE_ENV === "production";
   const databaseUrl = config.DATABASE_URL;
 
+  if (!databaseUrl) {
+    throw new Error("DATABASE_URL environment variable is required");
+  }
+
   return new DataSource({
     type: "postgres",
     url: databaseUrl,
