@@ -1,34 +1,18 @@
 # 🚀 Meetly Backend API
 
-<div align="center">
+<p align="center">
   <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/TypeORM-FE0803?style=for-the-badge&logo=typeorm&logoColor=white" alt="TypeORM" />
-</div>
+</p>
 
 <p align="center">
   <strong>A powerful and scalable backend API for the Meetly platform</strong><br>
-  Built with modern technologies for seamless meeting scheduling and management
+  Built with modern technologies for seamless meeting scheduling and management<br>
+  <strong>🚀 Live API: <a href="https://meetly-backend-api.onrender.com">https://meetly-backend-api.onrender.com</a></strong>
 </p>
-
----
-
-## 📋 Table of Contents
-
-- [✨ Features](#-features)
-- [🏗️ Architecture](#️-architecture)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [⚡ Quick Start](#-quick-start)
-- [🔧 Configuration](#-configuration)
-- [📊 Database](#-database)
-- [🚦 API Routes](#-api-routes)
-- [🔐 Authentication](#-authentication)
-- [🔗 Integrations](#-integrations)
-- [📝 Scripts](#-scripts)
-- [🧪 Development](#-development)
 
 ---
 
@@ -65,6 +49,46 @@
 - Comprehensive error handling
 - Structured logging
 - Environment-based configuration
+
+---
+
+## 🚀 Live Deployment
+
+**Production API**: [https://meetly-backend-api.onrender.com](https://meetly-backend-api.onrender.com)
+
+### Quick API Test
+
+```bash
+# Health Check
+curl https://meetly-backend-api.onrender.com
+
+# Expected Response:
+{
+  "message": "Meetly Backend API is running successfully!",
+  "status": "healthy",
+  "environment": "production",
+  "timestamp": "2025-08-15T15:33:47.655Z"
+}
+```
+
+### Live API Endpoints
+
+- **Base URL**: `https://meetly-backend-api.onrender.com/api`
+- **Health Check**: `GET https://meetly-backend-api.onrender.com/`
+- **Authentication**: `POST /api/auth/login`
+- **Google OAuth**: `GET /api/auth/google`
+- **Events**: `GET/POST /api/event`
+- **Meetings**: `GET/POST /api/meeting`
+- **Availability**: `GET/POST /api/availability`
+- **Integrations**: `GET/POST /api/integration`
+
+### Deployment Info
+
+- **Platform**: Render.com
+- **Region**: Oregon, USA
+- **Database**: Supabase PostgreSQL (AP-South-1)
+- **SSL**: Enabled (HTTPS)
+- **Auto-Deploy**: Connected to GitHub
 
 ---
 
@@ -160,14 +184,7 @@ backend/
    # Edit .env with your configuration
    ```
 
-4. **Set up database**
-
-   ```bash
-   # Run migrations
-   npm run db:migrate
-   ```
-
-5. **Start development server**
+4. **Start development server**
    ```bash
    npm run dev
    ```
@@ -186,7 +203,6 @@ Create a `.env` file in the backend root:
 # Server Configuration
 PORT=8000
 NODE_ENV=development
-BASE_PATH=/api
 
 # Database
 DATABASE_URL=postgresql://username:password@localhost:5432/meetly
