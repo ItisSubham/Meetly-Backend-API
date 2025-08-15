@@ -5,7 +5,7 @@ export const initializeDatabase = async () => {
   try {
     await AppDataSource.initialize();
     console.log("Database connected successfully");
-    
+
     // Run migrations in production
     if (process.env.NODE_ENV === "production") {
       console.log("Running database migrations...");
